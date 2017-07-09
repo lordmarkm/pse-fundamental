@@ -4,6 +4,7 @@ import org.dozer.DozerBeanMapper;
 import org.dozer.loader.api.BeanMappingBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import com.pse.core.dto.BaseInfo;
 import com.pse.core.model.BaseEntity;
@@ -16,6 +17,7 @@ import static org.dozer.loader.api.FieldsMappingOptions.copyByReference;
 public class MapperConfig {
 
     @Bean
+    @Primary
     public DozerBeanMapper mapper() {
         DozerBeanMapper mapper = new DozerBeanMapper();
         return mapper;
