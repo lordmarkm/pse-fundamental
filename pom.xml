@@ -13,6 +13,8 @@
   <name>PSE Fundamental</name>
 
   <modules>
+    <module>pse-core</module>
+    <module>pse-stocks</module>
   </modules>
 
   <properties>
@@ -46,6 +48,12 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>pse</groupId>
+        <artifactId>pse-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>org.jadira.usertype</groupId>
         <artifactId>usertype.core</artifactId>
