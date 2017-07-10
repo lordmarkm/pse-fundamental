@@ -9,10 +9,10 @@ import org.dozer.loader.api.BeanMappingBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.pse.stocks.dto.phisix.PhisixStock;
+import com.pse.stocks.dto.phisix.PhisixStocks;
 import com.pse.stocks.model.Stock;
 import com.pse.stocks.model.Stocks;
-import com.pse.stocks.phisix.dto.PhisixStock;
-import com.pse.stocks.phisix.dto.PhisixStocks;
 
 @Configuration
 public class PhisixMapperConfig {

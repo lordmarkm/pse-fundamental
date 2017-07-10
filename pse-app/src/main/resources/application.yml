@@ -28,3 +28,6 @@ spring:
 
 phisix:
   url: http://phisix-api.appspot.com/stocks
+
+pse-edge:
+  url: http://edge.pse.com.ph/companyPage/financial_reports_view.do?cmpy_id=

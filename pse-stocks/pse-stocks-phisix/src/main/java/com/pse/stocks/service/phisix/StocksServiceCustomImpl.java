@@ -1,4 +1,4 @@
-package com.pse.stocks.service.custom.phisix;
+package com.pse.stocks.service.phisix;
 
 import javax.annotation.PostConstruct;
 import javax.ws.rs.client.Client;
@@ -13,8 +13,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 
 import com.pse.stocks.config.PhisixMapperConfig;
+import com.pse.stocks.dto.phisix.PhisixStocks;
 import com.pse.stocks.model.Stocks;
-import com.pse.stocks.phisix.dto.PhisixStocks;
 import com.pse.stocks.service.StocksService;
 import com.pse.stocks.service.custom.StocksServiceCustom;
 

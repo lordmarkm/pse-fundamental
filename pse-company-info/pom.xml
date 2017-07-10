@@ -1,0 +1,15 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>pse</groupId>
+    <artifactId>pse</artifactId>
+    <version>1.0</version>
+  </parent>
+  <artifactId>pse-company-info</artifactId>
+  <packaging>pom</packaging>
+  <name>PSE :: Company Info</name>
+  <modules>
+    <module>pse-company-info-api</module>
+    <module>pse-company-info-pseedge</module>
+  </modules>
+</project>

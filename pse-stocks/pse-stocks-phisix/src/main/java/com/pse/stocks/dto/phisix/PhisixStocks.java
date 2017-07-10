@@ -1,4 +1,4 @@
-package com.pse.stocks.phisix.dto;
+package com.pse.stocks.dto.phisix;
 
 import java.util.List;
 
