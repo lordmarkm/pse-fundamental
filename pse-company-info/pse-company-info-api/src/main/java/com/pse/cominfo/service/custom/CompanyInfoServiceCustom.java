@@ -1,7 +1,10 @@
 package com.pse.cominfo.service.custom;
 
+import com.pse.cominfo.model.CompanyInformation;
+
 public interface CompanyInfoServiceCustom {
 
-    public void buildIndex();
+    void buildIndex();
+    CompanyInformation findByCode(String code);
 
 }

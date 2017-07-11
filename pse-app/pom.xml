@@ -16,6 +16,11 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
+      <groupId>pse</groupId>
+      <artifactId>pse-company-info-pseedge</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
     </dependency>

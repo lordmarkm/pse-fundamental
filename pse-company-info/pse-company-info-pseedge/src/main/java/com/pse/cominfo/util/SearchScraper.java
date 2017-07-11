@@ -32,7 +32,7 @@ public class SearchScraper {
         }
         map.forEach((k, v) -> {
             System.out.println(k + "," + v);
-        }); 
+        });
     }
 
     private static String extractId(String onclick) {

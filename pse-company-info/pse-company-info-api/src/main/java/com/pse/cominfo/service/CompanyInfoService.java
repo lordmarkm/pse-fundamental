@@ -10,6 +10,7 @@ import com.pse.cominfo.service.custom.CompanyInfoServiceCustom;
 
 public interface CompanyInfoService extends CompanyInfoServiceCustom, JpaRepository<CompanyInformation, Long> {
 
+    CompanyInformation findByCodeAndQueryTime(String code, DateTime queryTime);
     List<CompanyInformation> findByQueryTime(DateTime queryTime);
 
 }

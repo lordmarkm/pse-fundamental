@@ -19,7 +19,7 @@ public class StocksResource {
 
     @RequestMapping(method = GET)
     public ResponseEntity<Stocks> findAll() {
-        return new ResponseEntity<Stocks>(service.getAll(), OK);
+        return new ResponseEntity<>(service.getAll(), OK);
     }
 
 }
