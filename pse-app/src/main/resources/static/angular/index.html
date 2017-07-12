@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pse">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lul</title>
+
+	<script type="text/javascript" src="angular/js/angular.min.js"></script>
+	<script type="text/javascript" src="angular/js/smart-table.js"></script>
+	<script type="text/javascript" src="angular/js/controller.js"></script>
+</head>
+
+<body>
+<div ng-controller="SimpleController">
+        <table st-table="summary" st-safe-src="summary" class="table table-striped">
+            <thead>
+            <tr>
+                <th st-sort="code">Code</th>
+                <th st-sort="name">Name</th>
+                <th st-sort="price">Price</th>
+            </tr>
+            <tr>
+                <th><input st-search="code" class="form-control" placeholder="code" type="text"/></th>
+                <th><input st-search="name" class="form-control" placeholder="name" type="text"/></th>
+                <th><input st-search="price" class="form-control" placeholder="price" type="text"/></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="stock in summary">
+                <td>{{stock.code}}</td>
+                <td>{{stock.name}}</td>
+                <td>{{stock.price}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>

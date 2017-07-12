@@ -12,12 +12,7 @@
   <dependencies>
     <dependency>
       <groupId>pse</groupId>
-      <artifactId>pse-stocks-phisix</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>pse</groupId>
-      <artifactId>pse-company-info-pseedge</artifactId>
+      <artifactId>pse-summary</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>

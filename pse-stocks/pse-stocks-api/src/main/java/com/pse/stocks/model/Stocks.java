@@ -1,6 +1,7 @@
 package com.pse.stocks.model;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -27,6 +28,10 @@ public class Stocks extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "stocks_id")
     private List<Stock> stocks;
+
+    public Optional<Stock> get(String code) {
+         return stocks.stream().filter(s -> s.getSymbol().equals(code)).findFirst();
+    }
 
     public DateTime getAsOf() {
         return asOf;

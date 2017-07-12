@@ -1,7 +1,7 @@
 package com.pse.cominfo.service.pseedge;
 
 import static com.pse.cominfo.util.PseEdgeIds.PSE_EDGE_MAPPING;
-import static com.pse.core.util.BigDecimalUtil.tryParse;
+import static com.pse.core.util.BigDecimalUtil.*;
 
 import java.io.IOException;
 import java.util.List;
@@ -86,6 +86,15 @@ public class CompanyInfoServiceCustomImpl implements CompanyInfoServiceCustom {
             companyInfo.setCode(code);
             companyInfo.setBookValuePerShare(tryParse(bookValuePerShare));
             companyInfo.setEarningsPerShare(tryParse(earningsPerShare));
+            companyInfo.setBuyingPrice(multiply(companyInfo.getBookValuePerShare(), 1.5d));
+
+            LOG.debug("About to set buying price at target 10. BV/share={}, EPS/10={}",
+                    companyInfo.getBookValuePerShare(),
+                    divide(companyInfo.getEarningsPerShare(), 10d));
+            LOG.debug("Buying price at target 10={}", companyInfo.getBookValuePerShare().multiply(divide(companyInfo.getEarningsPerShare(), 10d)));
+            companyInfo.setBuyingPriceAtTarget10(
+                    multiply(companyInfo.getBookValuePerShare(),
+                            divide(companyInfo.getEarningsPerShare(), 10d)));
             companyInfo.setQueryTime(queryTime);
             return companyInfo;
         } catch (IOException e) {

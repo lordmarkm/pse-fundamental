@@ -26,9 +26,6 @@ public class CompanyInformation extends BaseEntity {
     @Column(name = "eps")
     private BigDecimal earningsPerShare;
 
-    @Column(name = "price_over_bv")
-    private BigDecimal priceOverBookValue;
-
     @Column(name = "buying_price")
     private BigDecimal buyingPrice;
 
@@ -49,14 +46,6 @@ public class CompanyInformation extends BaseEntity {
 
     public void setEarningsPerShare(BigDecimal earningsPerShare) {
         this.earningsPerShare = earningsPerShare;
-    }
-
-    public BigDecimal getPriceOverBookValue() {
-        return priceOverBookValue;
-    }
-
-    public void setPriceOverBookValue(BigDecimal priceOverBookValue) {
-        this.priceOverBookValue = priceOverBookValue;
     }
 
     public BigDecimal getBuyingPrice() {

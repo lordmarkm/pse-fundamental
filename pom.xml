@@ -17,6 +17,7 @@
     <module>pse-stocks</module>
     <module>pse-app</module>
     <module>pse-company-info</module>
+    <module>pse-summary</module>
   </modules>
 
   <properties>

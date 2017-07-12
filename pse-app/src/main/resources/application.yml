@@ -26,6 +26,10 @@ spring:
     show-sql: false
     hibernate.ddl-auto: update
 
+logging:
+  level:
+    com.pse: DEBUG
+
 phisix:
   url: http://phisix-api.appspot.com/stocks
 
