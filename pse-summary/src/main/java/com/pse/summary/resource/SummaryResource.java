@@ -22,6 +22,11 @@ public class SummaryResource {
     @Autowired
     private SummaryService service;
 
+    @RequestMapping(method = GET)
+    public ResponseEntity<List<SummaryItem>> getSummary() {
+        return  new ResponseEntity<>(service.getSummery(new String[] {}), OK);
+    }
+
     @RequestMapping(value = "/{codes}", method = GET)
     public ResponseEntity<List<SummaryItem>> getSummary(@PathVariable String codes) {
         return  new ResponseEntity<>(service.getSummery(codes.split(",")), OK);

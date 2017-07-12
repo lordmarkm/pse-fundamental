@@ -87,11 +87,6 @@ public class CompanyInfoServiceCustomImpl implements CompanyInfoServiceCustom {
             companyInfo.setBookValuePerShare(tryParse(bookValuePerShare));
             companyInfo.setEarningsPerShare(tryParse(earningsPerShare));
             companyInfo.setBuyingPrice(multiply(companyInfo.getBookValuePerShare(), 1.5d));
-
-            LOG.debug("About to set buying price at target 10. BV/share={}, EPS/10={}",
-                    companyInfo.getBookValuePerShare(),
-                    divide(companyInfo.getEarningsPerShare(), 10d));
-            LOG.debug("Buying price at target 10={}", companyInfo.getBookValuePerShare().multiply(divide(companyInfo.getEarningsPerShare(), 10d)));
             companyInfo.setBuyingPriceAtTarget10(
                     multiply(companyInfo.getBookValuePerShare(),
                             divide(companyInfo.getEarningsPerShare(), 10d)));

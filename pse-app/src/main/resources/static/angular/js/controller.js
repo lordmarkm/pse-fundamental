@@ -3,13 +3,15 @@
 
 var pse = ng.module('pse', []);
 
-pse.controller('SimpleController', ['$scope', function ($scope) {
+pse.controller('SimpleController', ['$scope', '$http', function ($scope, $http) {
   $scope.greeting = 'hola';
-  $scope.summary = [{
-	  code: 'Somecode',
-	  name: 'Some name',
-	  price: '12.26'
-  }];
+  $scope.summary = [];
+
+  //var codes = ['WLCON', 'FLI', 'SEVN', 'MBT'];
+  var codes = [];
+  $http.get('/summary/' + codes.join(',')).then(function (resp) {
+	  $scope.summary = resp.data;
+  });
 }])
 
 

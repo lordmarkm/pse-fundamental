@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Lists;
 import com.pse.cominfo.service.CompanyInfoService;
+import com.pse.cominfo.util.PseEdgeIds;
 import com.pse.stocks.model.Stock;
 import com.pse.stocks.model.Stocks;
 import com.pse.stocks.service.StocksService;
@@ -27,6 +28,11 @@ public class SummaryServiceImpl implements SummaryService {
         Stocks stocks = stocksService.getAll();
 
         List<SummaryItem> items = Lists.newArrayList();
+
+        if (codes.length == 0) {
+            codes = PseEdgeIds.PSE_EDGE_MAPPING.keySet().toArray(new String[]{});
+        }
+
         for (String code : codes) {
             Optional<Stock> stockOpt = stocks.get(code);
             if (stockOpt.isPresent()) {

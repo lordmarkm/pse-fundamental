@@ -28,8 +28,14 @@ public final class BigDecimalUtil {
         if (null == dividend) {
             return BigDecimal.ZERO;
         }
+        if (null == divisor || divisor.equals(0d)) {
+            return new BigDecimal(-1d);
+        }
         BigDecimal bDividend = new BigDecimal(dividend.toString());
         BigDecimal bDivisor = new BigDecimal(divisor.toString());
+        if (bDivisor.compareTo(BigDecimal.ZERO) == 0) {
+            return new BigDecimal(-1);
+        }
         return bDividend.divide(bDivisor, PRECISION, RoundingMode.HALF_UP);
     }
 
